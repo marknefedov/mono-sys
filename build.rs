@@ -1,5 +1,5 @@
 fn main() {
-    println!("cargo:rustc-link-lib=mono-2");
+    println!("cargo:rustc-link-lib=mono-2.0");
     let mono_lib = pkg_config::Config::default().probe("mono-2").unwrap();
     println!("{:?}", mono_lib);
     let bindings = bindgen::Builder::default()
